@@ -17,6 +17,8 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --box-shadow-hover: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --button-shadow-color: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -144,15 +146,11 @@ body {
 
 .mail-icon-item {
   fill: currentColor;
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
 }
 
 .tel-icon-item {
   fill: currentColor;
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
 }
 
@@ -263,11 +261,6 @@ body {
   justify-content: center;
   background-color: var(--secondary-bg-color);
   margin-bottom: var(--gallery-set-gap);
-}
-
-.advantages-icon-item {
-  width: 70px;
-  height: 70px;
 }
 
 .advantages-item-title {
@@ -394,13 +387,6 @@ body {
 
 .icon-item {
   fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-.icon-bg:hover {
-  background-color: var(--accent-color);
-  color: var(--white-color);
 }
 
 /* ----------------------------Clients----------------------------- */
@@ -436,11 +422,10 @@ body {
 
 .client-icon-item {
   fill: currentColor;
-  width: 106px;
-  height: 60px;
 }
 
-.client-icon-bg:hover {
+.client-icon-bg:hover,
+.client-icon-bg:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
@@ -510,7 +495,8 @@ body {
   background-color: var(--icon-bg-color);
 }
 
-.icon-bg:hover {
+.icon-bg:hover,
+.icon-bg:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
@@ -550,6 +536,7 @@ body {
 .filter-button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: var(--button-shadow-color);
 }
 
 .gallery {
